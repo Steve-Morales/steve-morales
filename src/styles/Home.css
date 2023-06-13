@@ -1,0 +1,7 @@
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Adjust the padding as desired */
+}
