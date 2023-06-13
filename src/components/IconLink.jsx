@@ -6,7 +6,7 @@ export default function IconLink({ icon_component, url, link_text, hover_text })
 
     return (
         <div className="flex flex-col justify-center items-center p-2">
-            {icon_component ? icon_component : <img src={'https://via.placeholder.com/300x200'} className='w-3/12' />}
+            {icon_component ? icon_component : <img alt="Icon" src={'https://via.placeholder.com/300x200'} className='w-3/12' />}
             <a
                 href={url ? url : '#'}
                 onMouseEnter={(e) => setText("🔗" + (hover_text ? hover_text : "https://www.example.com"))}

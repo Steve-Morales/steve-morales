@@ -10,8 +10,8 @@ export default function ProjectView({ imgSrc, sections, content }) {
                 <Navbar />
 
                 <div className="items-center">
-                    <img src={imgSrc ? imgSrc : "https://via.placeholder.com/900x600"} className="z-0 blur-md align-middle object-cover absolute h-[calc(100vh-64px)] w-full" />
-                    <img src={imgSrc ? imgSrc : "https://via.placeholder.com/900x600"} className="z-1 align-middle object-contain absolute h-[calc(100vh-64px)] w-full" />
+                    <img alt="background" src={imgSrc ? imgSrc : "https://via.placeholder.com/900x600"} className="z-0 blur-md align-middle object-cover absolute h-[calc(100vh-64px)] w-full" />
+                    <img alt="content" src={imgSrc ? imgSrc : "https://via.placeholder.com/900x600"} className="z-1 align-middle object-contain absolute h-[calc(100vh-64px)] w-full" />
                 </div>
             </section>
 

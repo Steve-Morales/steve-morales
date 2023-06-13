@@ -78,7 +78,7 @@ function Content() {
             <p className="content-p">
             I should make mention that a large portion of the program came from our cognitive science team member. The end result was a program that used parameters to enhance lane detection. The following is a screenshot of our program.
             </p>
-            <img src={FilterImg} className="pb-12"/>
+            <img src={FilterImg} className="pb-12" alt="filter image"/>
         </>
     );
 }
