@@ -14,6 +14,10 @@ import Contact from './views/Contact';
 // project pages
 import AutonomousVechicles from './views/projects/AutonomousVehicles';
 import ZooKeeper from './views/projects/ZooKeeper';
+import DelivAero from './views/projects/DelivAero';
+import Otto from './views/projects/Otto';
+import AutoJober from './views/projects/AutoJober';
+import Unity from './views/projects/Unity';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +35,22 @@ const router = createBrowserRouter([
   {
     path: "/projects/zoo-keeper",
     element: <ZooKeeper/>,
+  },
+  {
+    path: "/projects/delivAero",
+    element: <DelivAero/>,
+  },
+  {
+    path: "/projects/otto",
+    element: <Otto/>,
+  },
+  {
+    path: "/projects/auto-jober",
+    element: <AutoJober/>,
+  },
+  {
+    path: "/projects/unity-script",
+    element: <Unity/>,
   },
 ]);
 

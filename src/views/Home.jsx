@@ -70,24 +70,28 @@ export default function Home() {
                     />
 
                     <Card
+                        url="projects/delivAero"
                         title="delivAero"
                         image={DelivAeroCardImg}
                         description="Built a static website using Vue JS. The purpose of the website is to showcase an organization/club.Here I learn and explore the world of web-development and basic principles and fundamentals which are later used to learn ReactJS."
                     />
 
                     <Card
+                        url="projects/otto"
                         title="Otto"
                         image={Otto}
                         description="An individual project which automates user input on the Windows operating system. Using Python libraries, it automates clicking, mouse movement, take screenshots, loop interactions, and keyboard events. Using a GUI, a user can create a series of steps they want automated."
                     />
 
                     <Card
+                        url="projects/auto-jober"
                         title="Auto Jober"
                         image={AutoJoberImg}
                         description={"Leading a team of four, throughout a quarter (~3 months) we create a desktop application capable of applying to jobs on LinkedIn. However, many challenges were faced not only personally, but also as a team. Despite these challenges, we overcome them to deliver and showcase our project."}
                     />
 
                     <Card
+                        url="projects/unity-script"
                         title="Unity 2D Movement Script"
                         image={UnityImg}
                         description={"This small project allows 2D sprites in unity to move as a platformer. This includes jumping, moving left and right, collision detection, and sprite flipping. The purpose of this project is to make a free resource for novice programers."}
