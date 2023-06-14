@@ -1,7 +1,11 @@
 // Assets
 import ProfilePic from '../assets/profile_pic.jpg';
 import GroupPic from '../assets/AutonomousVehiclesImages/group_picture_1.jpg';
-
+import ZooKeeper from '../assets/ZooKeeper/zoo_keeper_app_demo.png';
+import DelivAeroCardImg from '../assets/DelivAero/deliv_aero_front_page.png';
+import Otto from '../assets/Otto/otto_demo.png';
+import AutoJoberImg from '../assets/AutoJober/auto_jober_img.png';
+import UnityImg from '../assets/Unity2DMovement/unity_2d_movement_img.png';
 
 // Components
 import Navbar from '../components/Navbar';
@@ -49,8 +53,8 @@ export default function Home() {
             </section>
 
 
-            <section className="p-4 md:h-screen flex items-center justify-center">
-                <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4 md:gap-16">
+            <section className="p-4  flex items-center justify-center">
+                <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 md:gap-16">
                     <Card
                         url="projects/autonomous-vehicles"
                         title="Autonomous Vehicles - Robotics"
@@ -59,48 +63,61 @@ export default function Home() {
                     />
 
                     <Card
-                        title="Card Title"
-                        image="https://via.placeholder.com/300x200"
-                        description="This is a sample card component."
+                        url="projects/zoo-keeper"
+                        title="Zoo Keeper"
+                        image={ZooKeeper}
+                        description="Working with my peers, I led a small team to create an Android app using Android Studio.Our app replicated the functionality of the San Diego Zoo app.Interesting concepts in this project include graphs, databases, design patterns, Git/Github, and UI."
                     />
 
                     <Card
-                        title="Card Title"
-                        image="https://via.placeholder.com/300x200"
-                        description="This is a sample card component."
+                        title="delivAero"
+                        image={DelivAeroCardImg}
+                        description="Built a static website using Vue JS. The purpose of the website is to showcase an organization/club.Here I learn and explore the world of web-development and basic principles and fundamentals which are later used to learn ReactJS."
                     />
 
                     <Card
-                        title="Card Title"
-                        image="https://via.placeholder.com/300x200"
-                        description="This is a sample card component."
+                        title="Otto"
+                        image={Otto}
+                        description="An individual project which automates user input on the Windows operating system. Using Python libraries, it automates clicking, mouse movement, take screenshots, loop interactions, and keyboard events. Using a GUI, a user can create a series of steps they want automated."
+                    />
+
+                    <Card
+                        title="Auto Jober"
+                        image={AutoJoberImg}
+                        description={"Leading a team of four, throughout a quarter (~3 months) we create a desktop application capable of applying to jobs on LinkedIn. However, many challenges were faced not only personally, but also as a team. Despite these challenges, we overcome them to deliver and showcase our project."}
+                    />
+
+                    <Card
+                        title="Unity 2D Movement Script"
+                        image={UnityImg}
+                        description={"This small project allows 2D sprites in unity to move as a platformer. This includes jumping, moving left and right, collision detection, and sprite flipping. The purpose of this project is to make a free resource for novice programers."}
                     />
                 </div>
             </section>
 
             <section className='p-4 flex flex-col sm:flex-row items-center justify-evenly'>
                 <div className='w-2/6'>
-                <IconLink
-                    icon_component={<FaLinkedin size={100} />}
-                    url={"https://www.linkedin.com/in/steve--morales/"}
-                    link_text={"LinkedIn"}
-                    hover_text={"https://www.linkedin.com/in/steve--morales/"}
-                />
+                    <IconLink
+                        icon_component={<FaLinkedin size={100} />}
+                        url={"https://www.linkedin.com/in/steve--morales/"}
+                        link_text={"LinkedIn"}
+                        hover_text={"https://www.linkedin.com/in/steve--morales/"}
+                    />
                 </div>
 
 
                 <div className='w-2/6'>
-                <IconLink
-                    icon_component={<FaGithub size={100} />}
-                    url={"https://github.com/Steve-Morales/"}
-                    link_text={"GitHub"}
-                    hover_text={"https://github.com/Steve-Morales/"}
-                />
+                    <IconLink
+                        icon_component={<FaGithub size={100} />}
+                        url={"https://github.com/Steve-Morales/"}
+                        link_text={"GitHub"}
+                        hover_text={"https://github.com/Steve-Morales/"}
+                    />
                 </div>
 
                 <div
-                className='w-2/6' 
-                onClick={(e) => { window.open('mailto:steve.morales22001@gmail.com?subject=SWE Opportunity'); }}>
+                    className='w-2/6'
+                    onClick={(e) => { window.open('mailto:steve.morales22001@gmail.com?subject=SWE Opportunity'); }}>
                     <IconLink
                         icon_component={<SiGmail size={100} />}
                         link_text={"Email"}

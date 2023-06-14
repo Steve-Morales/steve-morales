@@ -13,6 +13,7 @@ import Contact from './views/Contact';
 
 // project pages
 import AutonomousVechicles from './views/projects/AutonomousVehicles';
+import ZooKeeper from './views/projects/ZooKeeper';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/autonomous-vehicles",
     element: <AutonomousVechicles/>,
+  },
+  {
+    path: "/projects/zoo-keeper",
+    element: <ZooKeeper/>,
   },
 ]);
 
