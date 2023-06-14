@@ -23,7 +23,16 @@
 }
 
 .content-title-wrapper{
-  @apply p-4 flex items-center justify-center;
+  @apply p-4 flex items-center justify-center flex-col;
+}
+
+.content-subtitle
+{
+  @apply text-xs sm:text-sm md:text-base lg:text-lg;
+}
+.content-date
+{
+  @apply text-xs sm:text-sm md:text-base lg:text-lg font-medium;
 }
 
 .content-title-h1{

@@ -1,4 +1,5 @@
 // Assets
+import Hololens from '../assets/MARVIN/HOLOLENS-2.png';
 import ProfilePic from '../assets/profile_pic.jpg';
 import GroupPic from '../assets/AutonomousVehiclesImages/group_picture_1.jpg';
 import ZooKeeper from '../assets/ZooKeeper/zoo_keeper_app_demo.png';
@@ -55,6 +56,13 @@ export default function Home() {
 
             <section className="p-4  flex items-center justify-center">
                 <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 md:gap-16">
+                    <Card
+                        url="projects/marvin"
+                        title="MA.R.V.I.N"
+                        image={Hololens}
+                        description="Working as a team lead to create an innovate solution for surgery operations. Utilizing AR technology to create a digital enviornemtn to enhance surgery."
+                    />
+
                     <Card
                         url="projects/autonomous-vehicles"
                         title="Autonomous Vehicles - Robotics"

@@ -18,6 +18,7 @@ import DelivAero from './views/projects/DelivAero';
 import Otto from './views/projects/Otto';
 import AutoJober from './views/projects/AutoJober';
 import Unity from './views/projects/Unity';
+import Marvin from './views/projects/Marvin';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/unity-script",
     element: <Unity/>,
+  },
+  {
+    path: "/projects/marvin",
+    element: <Marvin/>,
   },
 ]);
 
