@@ -7,7 +7,7 @@ import DelivAeroCardImg from '../assets/DelivAero/deliv_aero_front_page.png';
 import Otto from '../assets/Otto/otto_demo.png';
 import AutoJoberImg from '../assets/AutoJober/auto_jober_img.png';
 import UnityImg from '../assets/Unity2DMovement/unity_2d_movement_img.png';
-import MyCountryImg from '../assets/MyCity/my_city.png';
+import MyCountryImg from '../assets/MyCountry/my_city.png';
 
 // Components
 import Navbar from '../components/Navbar';
