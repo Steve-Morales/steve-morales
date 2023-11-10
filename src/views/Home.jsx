@@ -7,6 +7,7 @@ import DelivAeroCardImg from '../assets/DelivAero/deliv_aero_front_page.png';
 import Otto from '../assets/Otto/otto_demo.png';
 import AutoJoberImg from '../assets/AutoJober/auto_jober_img.png';
 import UnityImg from '../assets/Unity2DMovement/unity_2d_movement_img.png';
+import MyCountryImg from '../assets/MyCity/my_city.png';
 
 // Components
 import Navbar from '../components/Navbar';
@@ -56,6 +57,13 @@ export default function Home() {
 
             <section className="p-4  flex items-center justify-center">
                 <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 md:gap-16">
+                    <Card
+                        url={"projects/my-country"}
+                        title={"My Country"}
+                        image={MyCountryImg}
+                        description={"Integrating the Rest Countries API, a user can obtain and search knowledge from a country. Allowing for different ways to search for any of the 250 countries!"}
+                    />
+                    
                     <Card
                         url="projects/marvin"
                         title="MA.R.V.I.N"

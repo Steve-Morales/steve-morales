@@ -19,6 +19,7 @@ import Otto from './views/projects/Otto';
 import AutoJober from './views/projects/AutoJober';
 import Unity from './views/projects/Unity';
 import Marvin from './views/projects/Marvin';
+import MyCountry from './views/projects/MyCountry';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/marvin",
     element: <Marvin/>,
+  },
+  {
+    path: "/projects/my-country",
+    element: <MyCountry/>,
   },
 ]);
 
