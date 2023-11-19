@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Steve Morales - Web Developer
+Hey there! I'm Steve Morales, a computer engineering student at the University of California, San Diego, with a deep-rooted passion for creating scalable and responsive web applications. I thrive on utilizing a diverse range of programming languages and technologies to craft efficient solutions and tackle complex challenges.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About Me
+- 🎓 Computer Engineering at UC San Diego
+- 💻 Proficient in C++, Python, JavaScript, CSS, and HTML
+- 🌐 Skilled in creating RESTful APIs and full-stack development
+- ☁️ Experienced in cloud deployment on Amazon Web Services (AWS)
+- 🐳 Familiar with Docker for containerization
+- 🔗 Well-versed in version control using Git/Github and development with VS Code
 
-## Available Scripts
+## Projects
+### Portfolio Website Optimization
+Developed a sleek portfolio website with optimized production builds for enhanced performance and user experience.
 
-In the project directory, you can run:
+### San Diego Zoo Android App Replica
+Built an Android app replicating the San Diego Zoo app, incorporating various features and functionalities.
 
-### `npm start`
+### Autonomous Driving with DonkeyCar AI Framework
+Led a team in integrating DonkeyCar AI framework, enabling autonomous driving using ROS 2 and lane navigation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Android App Development & CI/CD
+Directed design reviews and implemented continuous integration via GitHub Actions, preventing 55% of failed updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Skills & Expertise
+- **Languages**: C++, Python, JavaScript, CSS, HTML
+- **Technologies**: AWS, Docker, RESTful APIs
+- **Tools**: Git/Github, VS Code, Android Studio
 
-### `npm test`
+## Collaboration & Leadership
+I possess strong collaboration and leadership skills, evident in leading teams through complex projects and directing design reviews. My experience in implementing continuous integration methods ensures reliable quality and stability in project releases.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Let's Connect!
+I'm enthusiastic about taking on new challenges and contributing to innovative web development projects. Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/steve--morales/) or via email at steve.morales22001@gmail.com. I'm always open to discussing potential web development opportunities or connecting with like-minded individuals in the field!
