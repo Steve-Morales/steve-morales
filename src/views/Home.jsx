@@ -21,33 +21,33 @@ import { SiGmail } from 'react-icons/si';
 
 export default function Home() {
     return (
-        <>
+        <div className="bg-gray-950 min-h-screen">
 
             <section className="min-h-screen flex flex-col">
                 <Navbar />
 
-                <div className='hidden sm:flex flex-1 flex-row items-center justify-center'>
-                    <img src={ProfilePic} alt="Profile" className='sm:w-4/12 lg:w-2/6 2xl:w-3/12 mx-4' />
+                <div className='hidden sm:flex flex-1 flex-row items-center justify-center px-8'>
+                    <img src={ProfilePic} alt="Profile" className='sm:w-4/12 lg:w-2/6 2xl:w-3/12 mx-4 rounded-lg shadow-2xl' />
                     <div className='p-4 sm:w-8/12 md:w-6/12 lg:w-3/6 2xl:w-5/12'>
-                        <h1 className="p-2 font-extrabold underline">A Jack of All Trades</h1>
-                        <p className='p-2 text-lg hover:font-medium hover:scale-110 transition-transform'>Highly skilled software engineer with in computer engineering</p>
-                        <p className='p-2 text-lg hover:font-medium hover:scale-110 transition-transform'>Proficient in multiple programming languages and frameworks</p>
-                        <p className='p-2 text-lg hover:font-medium hover:scale-110 transition-transform'>Expertise in building robust and scalable applications</p>
-                        <p className='p-2 text-lg hover:font-medium hover:scale-110 transition-transform'>Commitment to writing clean and maintainable code</p>
-                        <p className='p-2 text-lg hover:font-medium hover:scale-110 transition-transform'>Proven track record of successful project delivery</p>
+                        <h1 className="p-2 text-3xl font-extrabold text-white mb-4">A Jack of All Trades</h1>
+                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Highly skilled software engineer with in computer engineering</p>
+                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Proficient in multiple programming languages and frameworks</p>
+                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Expertise in building robust and scalable applications</p>
+                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Commitment to writing clean and maintainable code</p>
+                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Proven track record of successful project delivery</p>
                     </div>
                 </div>
 
 
-                <div className='sm:hidden flex flex-1 flex-col items-center justify-center'>
-                    <img src={ProfilePic} alt="Profile" className='w-8/12' />
-                    <div className='p-2 sm:hidden'>
-                        <h1 className="font-bold">A Jack of All Trades</h1>
-                        <p>Highly skilled software engineer with a strong background in computer science</p>
-                        <p>Proficient in multiple programming languages and frameworks</p>
-                        <p>Expertise in building robust and scalable applications</p>
-                        <p>Commitment to writing clean and maintainable code</p>
-                        <p>Proven track record of successful project delivery</p>
+                <div className='sm:hidden flex flex-1 flex-col items-center justify-center px-4'>
+                    <img src={ProfilePic} alt="Profile" className='w-8/12 rounded-lg shadow-2xl' />
+                    <div className='p-4 sm:hidden'>
+                        <h1 className="text-2xl font-bold text-white mb-4 text-center">A Jack of All Trades</h1>
+                        <p className='text-gray-300 mb-2'>Highly skilled software engineer with a strong background in computer science</p>
+                        <p className='text-gray-300 mb-2'>Proficient in multiple programming languages and frameworks</p>
+                        <p className='text-gray-300 mb-2'>Expertise in building robust and scalable applications</p>
+                        <p className='text-gray-300 mb-2'>Commitment to writing clean and maintainable code</p>
+                        <p className='text-gray-300 mb-2'>Proven track record of successful project delivery</p>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
             </section>
 
 
-            <section className="p-4  flex items-center justify-center">
+            <section className="p-8 bg-gray-900 flex items-center justify-center">
                 <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 md:gap-16">
                     <Card
                         url={"projects/my-country"}
@@ -115,8 +115,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className='p-4 flex flex-col sm:flex-row items-center justify-evenly'>
-                <div className='w-2/6'>
+            <section className='p-8 bg-gray-950 flex flex-col sm:flex-row items-center justify-evenly gap-8'>
+                <div className='w-full sm:w-2/6'>
                     <IconLink
                         icon_component={<FaLinkedin size={100} />}
                         url={"https://www.linkedin.com/in/steve--morales/"}
@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
 
 
-                <div className='w-2/6'>
+                <div className='w-full sm:w-2/6'>
                     <IconLink
                         icon_component={<FaGithub size={100} />}
                         url={"https://github.com/Steve-Morales/"}
@@ -136,7 +136,7 @@ export default function Home() {
                 </div>
 
                 <div
-                    className='w-2/6'
+                    className='w-full sm:w-2/6'
                     onClick={(e) => { window.open('mailto:steve.morales22001@gmail.com?subject=SWE Opportunity'); }}>
                     <IconLink
                         icon_component={<SiGmail size={100} />}
@@ -148,6 +148,6 @@ export default function Home() {
             </section>
 
             <Footer />
-        </>
+        </div>
     );
 }
