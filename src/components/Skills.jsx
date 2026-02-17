@@ -1,13 +1,13 @@
 import React from 'react';
-import { SiCplusplus, SiPython, SiJavascript, SiReact, SiGit, SiLinux, SiDocker, SiAmazonaws } from 'react-icons/si';
+import { SiCplusplus, SiPython, SiJavascript, SiReact, SiGit, SiLinux, SiDocker, SiAmazonaws, SiBitbucket } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
 const skillsData = [
     {
         category: "Languages",
         items: [
-            { name: "C++", icon: <SiCplusplus className="text-5xl" />, color: "text-blue-500" },
-            { name: "Python", icon: <SiPython className="text-5xl" />, color: "text-yellow-400" },
+            { name: "C++", icon: <SiCplusplus className="text-5xl" />, color: "text-blue-500", highlighted: true },
+            { name: "Python", icon: <SiPython className="text-5xl" />, color: "text-yellow-400", highlighted: true },
             { name: "Java", icon: <FaJava className="text-5xl" />, color: "text-red-500" },
             { name: "JavaScript", icon: <SiJavascript className="text-5xl" />, color: "text-yellow-300" },
         ]
@@ -15,10 +15,11 @@ const skillsData = [
     {
         category: "Technologies & Tools",
         items: [
-            { name: "Git/GitLab", icon: <SiGit className="text-5xl" />, color: "text-orange-500" },
-            { name: "Linux", icon: <SiLinux className="text-5xl" />, color: "text-gray-200" },
+            { name: "Git/GitLab", icon: <SiGit className="text-5xl" />, color: "text-orange-500", highlighted: true },
+            { name: "Bitbucket", icon: <SiBitbucket className="text-5xl" />, color: "text-blue-500" },
+            { name: "Linux", icon: <SiLinux className="text-5xl" />, color: "text-gray-200", highlighted: true },
             { name: "Docker", icon: <SiDocker className="text-5xl" />, color: "text-blue-400" },
-            { name: "AWS EC2", icon: <SiAmazonaws className="text-5xl" />, color: "text-orange-400" },
+            { name: "AWS EC2", icon: <SiAmazonaws className="text-5xl" />, color: "text-orange-400", highlighted: true },
             { name: "React", icon: <SiReact className="text-5xl" />, color: "text-cyan-400" },
         ]
     }
@@ -40,7 +41,7 @@ export default function Skills() {
                             {skillGroup.items.map((skill, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 flex flex-col items-center justify-center hover:border-blue-500 hover:scale-105 transition-all duration-300 group"
+                                    className={`bg-gray-800/50 border-2 ${skill.highlighted ? 'border-yellow-500' : 'border-gray-700'} rounded-lg p-6 flex flex-col items-center justify-center hover:border-blue-500 hover:scale-105 transition-all duration-300 group`}
                                 >
                                     <div className={`${skill.color} group-hover:scale-110 transition-transform mb-3`}>
                                         {skill.icon}
