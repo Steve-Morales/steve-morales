@@ -75,6 +75,23 @@ const projectsData = [
 ];
 
 export default function Resume() {
+    const handleDownloadResume = async () => {
+        try {
+            const response = await fetch('/Steve_Morales_Resume_2026.pdf');
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Steve_Morales_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Error downloading resume:', error);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-gray-950">
             <Navbar />
@@ -87,14 +104,13 @@ export default function Resume() {
                                 <p className="text-gray-300 text-lg">Software Engineer | San Diego, CA</p>
                                 <p className="text-gray-400">steve.morales22001@gmail.com | 323-849-7222</p>
                             </div>
-                            <a
-                                href="/Steve_Morales_Resume_2026.pdf"
-                                download="Steve_Morales_Resume.pdf"
-                                className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+                            <button
+                                onClick={handleDownloadResume}
+                                className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 cursor-pointer"
                             >
                                 <FaDownload />
                                 Download Resume
-                            </a>
+                            </button>
                         </div>
                     </div>
 

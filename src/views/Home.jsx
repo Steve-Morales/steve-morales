@@ -21,6 +21,23 @@ import { SiGmail } from 'react-icons/si';
 
 
 export default function Home() {
+    const handleDownloadResume = async () => {
+        try {
+            const response = await fetch('/Steve_Morales_Resume_2026.pdf');
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Steve_Morales_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Error downloading resume:', error);
+        }
+    };
+
     return (
         <div className="bg-gray-950 min-h-screen">
             <Navbar />
@@ -63,14 +80,13 @@ export default function Home() {
                         </div>
 
                         <div className='flex flex-wrap gap-4 pt-4'>
-                            <a
-                                href="/Steve_Morales_Resume_2026.pdf"
-                                download="Steve_Morales_Resume.pdf"
-                                className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2'
+                            <button
+                                onClick={handleDownloadResume}
+                                className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 cursor-pointer'
                             >
                                 <FaDownload />
                                 Download Resume
-                            </a>
+                            </button>
                             <a
                                 href="#contact"
                                 className='bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg border border-gray-600 transition-all duration-300 transform hover:scale-105'
