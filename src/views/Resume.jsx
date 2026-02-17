@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode } from 'react-icons/fa';
+import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode, FaShieldAlt } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -190,9 +190,22 @@ export default function Resume() {
                                 <FaCertificate className="text-blue-400 text-2xl" />
                                 <h2 className="text-3xl font-bold text-white">Certifications</h2>
                             </div>
-                            <div className="border-l-4 border-yellow-500 pl-6">
-                                <h3 className="text-xl font-bold text-white">CompTIA Security+</h3>
-                                <p className="text-gray-400">Issued: September 2025</p>
+                            <div className="relative overflow-hidden bg-gradient-to-br from-red-900/30 via-gray-800/50 to-gray-900/30 border-2 border-red-500/50 rounded-xl p-6 shadow-lg hover:shadow-red-500/30 transition-all duration-300">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
+                                <div className="absolute bottom-0 left-0 w-24 h-24 bg-yellow-500/10 rounded-full blur-2xl"></div>
+                                <div className="relative flex items-center gap-6">
+                                    <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/50">
+                                        <FaShieldAlt className="text-white text-4xl" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-2xl font-bold text-white mb-1">CompTIA Security+</h3>
+                                        <p className="text-gray-300 text-sm mb-2">Credential ID: Verified Professional</p>
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-gray-400 text-sm">Issued: September 2025</span>
+                                            <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-red-300 text-xs font-semibold">Active</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
