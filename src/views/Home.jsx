@@ -74,7 +74,10 @@ export default function Home() {
                                 <p className='text-gray-300'>Expert in C++, Linux, Docker, and distributed system architecture</p>
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border-2 border-red-500 hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-red-500/50'>
-                                <h3 className='text-red-400 font-bold text-lg mb-2'>Security Certified</h3>
+                                <div className='flex items-center gap-3 mb-2'>
+                                    <img src="/image.png" alt="CompTIA Security+" className='w-8 h-8' />
+                                    <h3 className='text-red-400 font-bold text-lg'>Security+ Certified</h3>
+                                </div>
                                 <p className='text-gray-300'>CompTIA Security+ certified with focus on secure software development</p>
                             </div>
                         </div>
