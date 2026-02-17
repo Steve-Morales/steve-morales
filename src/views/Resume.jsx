@@ -198,8 +198,7 @@ export default function Resume() {
                                         <FaShieldAlt className="text-white text-4xl" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-2xl font-bold text-white mb-1">CompTIA Security+</h3>
-                                        <p className="text-gray-300 text-sm mb-2">Credential ID: Verified Professional</p>
+                                        <h3 className="text-2xl font-bold text-white mb-2">CompTIA Security+</h3>
                                         <div className="flex items-center gap-4">
                                             <span className="text-gray-400 text-sm">Issued: September 2025</span>
                                             <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-red-300 text-xs font-semibold">Active</span>
