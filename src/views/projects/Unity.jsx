@@ -41,7 +41,7 @@ function Content() {
             <h1 class="content-h1" id="script">The Script</h1>
             <p class="content-p">Since the purpose of the script is to help novices, I made sure to parameterize various things such as speed, number of jumps, and the amount of force for a jump. These parameters can be changed through the GUI rather than than the code itself. This was accomplished by using Unity's `[SerializeField]`. For those familiar with Unity may question my decision to make fields private rather than public. This is to ensure OOP (Object Oriented Principles) are followed. Of course, the script can be edited to have getter methods if needed, but this still ensured OOP are followed.</p>
             <div>
-                <img src={InspectorImg}/>
+                <img src={InspectorImg} alt="Unity inspector showing movement script parameters"/>
             </div>
             <p class="content-p">I also ensure to abstract flipping the sprite. This is to say, when the user moves left, the sprite would continue facing right when it should be facing left, so I ensure the sprite is facing the direction the player moves in. This eliminates confusion regarding animations to a small extent.</p>
             <p class="content-p">I make sure to include a README file which explains requirements to ensure the script works properly.</p>

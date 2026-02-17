@@ -72,11 +72,11 @@ function Content() {
             <p className="content-p">
                 The last component of this course was harnessing the power of computer Vision. Specifically, we had to implement an idea or method that could improve computer vision by generating visual data that can enhance detection of objects or utilize given data from the vision of the computer. Some concepts included SLAM (Simultaneous Localization And Mapping), truck detection, and line detection. We choose to do our project on line detection, Specifically that of car lanes. To achieve this, we used the Open CV library and implemented Canny Filtering to detect edges (lines). The full details of our project can be found on this wiki:
             </p>
-            <a 
+            <a
             href="https://guitar.ucsd.edu/maeece148/index.php/2022SummerTeam4"
-            id='project-wiki-section' 
+            id='project-wiki-section'
             className="content-link content-p"
-            onMouseEnter={(e) => setProjectLink("🔗" + "https://guitar.ucsd.edu/maeece148/index.php/2022SummerTeam4")}
+            onMouseEnter={(e) => setProjectLink("🔗https://guitar.ucsd.edu/maeece148/index.php/2022SummerTeam4")}
                 onMouseLeave={(e) => setProjectLink("Project Wiki")}
             >
                 {projectLink}
@@ -84,7 +84,7 @@ function Content() {
             <p className="content-p">
                 I should make mention that a large portion of the program came from our cognitive science team member. The end result was a program that used parameters to enhance lane detection. The following is a screenshot of our program.
             </p>
-            <img src={FilterImg} className="pb-12" alt="filter image" />
+            <img src={FilterImg} className="pb-12" alt="Lane detection program screenshot" />
         </>
     );
 }
