@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const experienceData = [
     {
@@ -74,109 +76,113 @@ const projectsData = [
 
 export default function Resume() {
     return (
-        <div className="min-h-screen bg-gray-900 py-12">
-            <div className="max-w-6xl mx-auto px-8">
-                <div className="bg-gradient-to-br from-blue-900/20 to-gray-800/50 border border-blue-500/30 rounded-2xl p-8 mb-8">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div>
-                            <h1 className="text-4xl font-bold text-white mb-2">Steve A. Morales</h1>
-                            <p className="text-gray-300 text-lg">Software Engineer | San Diego, CA</p>
-                            <p className="text-gray-400">steve.morales22001@gmail.com | 323-849-7222</p>
+        <div className="min-h-screen bg-gray-950">
+            <Navbar />
+            <div className="bg-gray-900 py-12">
+                <div className="max-w-6xl mx-auto px-8">
+                    <div className="bg-gradient-to-br from-blue-900/20 to-gray-800/50 border border-blue-500/30 rounded-2xl p-8 mb-8">
+                        <div className="flex flex-col md:flex-row justify-between items-center">
+                            <div>
+                                <h1 className="text-4xl font-bold text-white mb-2">Steve A. Morales</h1>
+                                <p className="text-gray-300 text-lg">Software Engineer | San Diego, CA</p>
+                                <p className="text-gray-400">steve.morales22001@gmail.com | 323-849-7222</p>
+                            </div>
+                            <a
+                                href="/Steve_Morales_Resume_2026.pdf"
+                                download
+                                className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+                            >
+                                <FaDownload />
+                                Download Resume
+                            </a>
                         </div>
-                        <a
-                            href="/Steve_Morales_Resume_2026.pdf"
-                            download
-                            className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-                        >
-                            <FaDownload />
-                            Download Resume
-                        </a>
+                    </div>
+
+                    <div className="space-y-8">
+                        <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
+                            <div className="flex items-center gap-3 mb-6">
+                                <FaBriefcase className="text-blue-400 text-2xl" />
+                                <h2 className="text-3xl font-bold text-white">Experience</h2>
+                            </div>
+                            <div className="space-y-8">
+                                {experienceData.map((job, index) => (
+                                    <div key={index} className="border-l-4 border-blue-500 pl-6">
+                                        <h3 className="text-xl font-bold text-white">{job.title}</h3>
+                                        <p className="text-blue-400 font-semibold">{job.company}</p>
+                                        <p className="text-gray-400 text-sm mb-3">{job.location} | {job.period}</p>
+                                        <ul className="space-y-2">
+                                            {job.highlights.map((highlight, idx) => (
+                                                <li key={idx} className="text-gray-300 flex items-start gap-2">
+                                                    <span className="text-blue-400 mt-1">▸</span>
+                                                    <span>{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
+                            <div className="flex items-center gap-3 mb-6">
+                                <FaGraduationCap className="text-blue-400 text-2xl" />
+                                <h2 className="text-3xl font-bold text-white">Education</h2>
+                            </div>
+                            <div className="space-y-6">
+                                {educationData.map((edu, index) => (
+                                    <div key={index} className="border-l-4 border-green-500 pl-6">
+                                        <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
+                                        <p className="text-green-400 font-semibold">{edu.school}</p>
+                                        <p className="text-gray-400 text-sm">{edu.location} | {edu.period}</p>
+                                        <p className="text-gray-300 font-semibold mt-1">GPA: {edu.gpa}</p>
+                                        {edu.coursework.length > 0 && (
+                                            <div className="mt-2">
+                                                <p className="text-gray-400 text-sm">Key Coursework:</p>
+                                                <p className="text-gray-300 text-sm">{edu.coursework.join(', ')}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
+                            <div className="flex items-center gap-3 mb-6">
+                                <FaCode className="text-blue-400 text-2xl" />
+                                <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
+                            </div>
+                            <div className="space-y-6">
+                                {projectsData.map((project, index) => (
+                                    <div key={index} className="border-l-4 border-purple-500 pl-6">
+                                        <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                                        <p className="text-gray-400 text-sm mb-3">{project.period}</p>
+                                        <ul className="space-y-2">
+                                            {project.highlights.map((highlight, idx) => (
+                                                <li key={idx} className="text-gray-300 flex items-start gap-2">
+                                                    <span className="text-purple-400 mt-1">▸</span>
+                                                    <span>{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
+                            <div className="flex items-center gap-3 mb-6">
+                                <FaCertificate className="text-blue-400 text-2xl" />
+                                <h2 className="text-3xl font-bold text-white">Certifications</h2>
+                            </div>
+                            <div className="border-l-4 border-yellow-500 pl-6">
+                                <h3 className="text-xl font-bold text-white">CompTIA Security+</h3>
+                                <p className="text-gray-400">Issued: September 2025</p>
+                            </div>
+                        </section>
                     </div>
                 </div>
-
-                <div className="space-y-8">
-                    <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <FaBriefcase className="text-blue-400 text-2xl" />
-                            <h2 className="text-3xl font-bold text-white">Experience</h2>
-                        </div>
-                        <div className="space-y-8">
-                            {experienceData.map((job, index) => (
-                                <div key={index} className="border-l-4 border-blue-500 pl-6">
-                                    <h3 className="text-xl font-bold text-white">{job.title}</h3>
-                                    <p className="text-blue-400 font-semibold">{job.company}</p>
-                                    <p className="text-gray-400 text-sm mb-3">{job.location} | {job.period}</p>
-                                    <ul className="space-y-2">
-                                        {job.highlights.map((highlight, idx) => (
-                                            <li key={idx} className="text-gray-300 flex items-start gap-2">
-                                                <span className="text-blue-400 mt-1">▸</span>
-                                                <span>{highlight}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-                    <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <FaGraduationCap className="text-blue-400 text-2xl" />
-                            <h2 className="text-3xl font-bold text-white">Education</h2>
-                        </div>
-                        <div className="space-y-6">
-                            {educationData.map((edu, index) => (
-                                <div key={index} className="border-l-4 border-green-500 pl-6">
-                                    <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
-                                    <p className="text-green-400 font-semibold">{edu.school}</p>
-                                    <p className="text-gray-400 text-sm">{edu.location} | {edu.period}</p>
-                                    <p className="text-gray-300 font-semibold mt-1">GPA: {edu.gpa}</p>
-                                    {edu.coursework.length > 0 && (
-                                        <div className="mt-2">
-                                            <p className="text-gray-400 text-sm">Key Coursework:</p>
-                                            <p className="text-gray-300 text-sm">{edu.coursework.join(', ')}</p>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-                    <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <FaCode className="text-blue-400 text-2xl" />
-                            <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
-                        </div>
-                        <div className="space-y-6">
-                            {projectsData.map((project, index) => (
-                                <div key={index} className="border-l-4 border-purple-500 pl-6">
-                                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                                    <p className="text-gray-400 text-sm mb-3">{project.period}</p>
-                                    <ul className="space-y-2">
-                                        {project.highlights.map((highlight, idx) => (
-                                            <li key={idx} className="text-gray-300 flex items-start gap-2">
-                                                <span className="text-purple-400 mt-1">▸</span>
-                                                <span>{highlight}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-
-                    <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <FaCertificate className="text-blue-400 text-2xl" />
-                            <h2 className="text-3xl font-bold text-white">Certifications</h2>
-                        </div>
-                        <div className="border-l-4 border-yellow-500 pl-6">
-                            <h3 className="text-xl font-bold text-white">CompTIA Security+</h3>
-                            <p className="text-gray-400">Issued: September 2025</p>
-                        </div>
-                    </section>
-                </div>
             </div>
+            <Footer />
         </div>
     );
 }
