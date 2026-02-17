@@ -1,40 +1,115 @@
 import Navbar from "../components/Navbar";
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import Footer from "../components/Footer";
 
 export default function Contact() {
     return (
-        <>
+        <div className="bg-gray-950 min-h-screen">
             <Navbar />
-            <div className="flex items-center justify-center container mx-auto px-4 py-8 h-[calc(100vh-64px)]">
-                <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold mb-4">Contact Me</h1>
-                    <div className="flex flex-col space-y-4">
-                        <div className="flex items-center space-x-2">
-                            <FaEnvelope className="text-blue-500 text-xl" />
-                            <a href="mailto:steve.morales22001@gmail.com" className="text-lg">
-                                steve.morales22001@gmail.com
-                            </a>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <FaPhone className="text-blue-500 text-xl" />
-                            <span className="text-lg">+1 (323) 849-7222</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <FaLinkedin className="text-blue-500 text-xl" />
-                            <a
-                                href="https://www.linkedin.com/in/steve--morales/"
-                                className="text-lg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                steve--morales
-                            </a>
+
+            <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h1 className="text-5xl font-extrabold text-white mb-4">Let's Work Together</h1>
+                        <p className="text-xl text-gray-300 mb-8">
+                            I'm actively seeking new opportunities in software engineering.
+                            Whether you have a position, project, or just want to connect, I'd love to hear from you.
+                        </p>
+                        <a
+                            href="mailto:steve.morales22001@gmail.com?subject=SWE Opportunity"
+                            className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl text-lg"
+                        >
+                            Send Me an Email
+                        </a>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-12">
+                        <a
+                            href="mailto:steve.morales22001@gmail.com"
+                            className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl group"
+                        >
+                            <div className="flex items-center space-x-4 mb-4">
+                                <FaEnvelope className="text-blue-400 text-4xl group-hover:scale-110 transition-transform" />
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">Email</h3>
+                                    <p className="text-gray-400">Best way to reach me</p>
+                                </div>
+                            </div>
+                            <p className="text-blue-300 text-lg font-medium">steve.morales22001@gmail.com</p>
+                        </a>
+
+                        <a
+                            href="tel:+13238497222"
+                            className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl group"
+                        >
+                            <div className="flex items-center space-x-4 mb-4">
+                                <FaPhone className="text-blue-400 text-4xl group-hover:scale-110 transition-transform" />
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">Phone</h3>
+                                    <p className="text-gray-400">Available for calls</p>
+                                </div>
+                            </div>
+                            <p className="text-blue-300 text-lg font-medium">+1 (323) 849-7222</p>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/steve--morales/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl group"
+                        >
+                            <div className="flex items-center space-x-4 mb-4">
+                                <FaLinkedin className="text-blue-400 text-4xl group-hover:scale-110 transition-transform" />
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">LinkedIn</h3>
+                                    <p className="text-gray-400">Professional network</p>
+                                </div>
+                            </div>
+                            <p className="text-blue-300 text-lg font-medium">linkedin.com/in/steve--morales</p>
+                        </a>
+
+                        <a
+                            href="https://github.com/Steve-Morales/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-xl group"
+                        >
+                            <div className="flex items-center space-x-4 mb-4">
+                                <FaGithub className="text-blue-400 text-4xl group-hover:scale-110 transition-transform" />
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">GitHub</h3>
+                                    <p className="text-gray-400">View my code</p>
+                                </div>
+                            </div>
+                            <p className="text-blue-300 text-lg font-medium">github.com/Steve-Morales</p>
+                        </a>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-blue-900/20 to-gray-800/20 p-8 rounded-xl border border-blue-500/30">
+                        <h2 className="text-2xl font-bold text-white mb-4">What I'm Looking For</h2>
+                        <div className="grid md:grid-cols-2 gap-4 text-gray-300">
+                            <div className="flex items-start space-x-3">
+                                <span className="text-blue-400 text-xl">✓</span>
+                                <p>Full-time software engineering positions</p>
+                            </div>
+                            <div className="flex items-start space-x-3">
+                                <span className="text-blue-400 text-xl">✓</span>
+                                <p>Full-stack or backend development roles</p>
+                            </div>
+                            <div className="flex items-start space-x-3">
+                                <span className="text-blue-400 text-xl">✓</span>
+                                <p>Opportunities in robotics and AR/VR</p>
+                            </div>
+                            <div className="flex items-start space-x-3">
+                                <span className="text-blue-400 text-xl">✓</span>
+                                <p>Projects involving innovative technologies</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <Footer/>
-        </>
+        </div>
     );
 }
