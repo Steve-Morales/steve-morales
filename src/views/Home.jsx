@@ -22,129 +22,190 @@ import { SiGmail } from 'react-icons/si';
 export default function Home() {
     return (
         <div className="bg-gray-950 min-h-screen">
+            <Navbar />
 
-            <section className="min-h-screen flex flex-col">
-                <Navbar />
-
-                <div className='hidden sm:flex flex-1 flex-row items-center justify-center px-8'>
-                    <img src={ProfilePic} alt="Profile" className='sm:w-4/12 lg:w-2/6 2xl:w-3/12 mx-4 rounded-lg shadow-2xl' />
-                    <div className='p-4 sm:w-8/12 md:w-6/12 lg:w-3/6 2xl:w-5/12'>
-                        <h1 className="p-2 text-3xl font-extrabold text-white mb-4">A Jack of All Trades</h1>
-                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Highly skilled software engineer with in computer engineering</p>
-                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Proficient in multiple programming languages and frameworks</p>
-                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Expertise in building robust and scalable applications</p>
-                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Commitment to writing clean and maintainable code</p>
-                        <p className='p-2 text-lg text-gray-300 hover:text-white hover:scale-105 transition-all duration-300'>Proven track record of successful project delivery</p>
+            <section className="min-h-screen flex flex-col justify-center px-8 py-16">
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-12 max-w-7xl mx-auto'>
+                    <div className='lg:w-5/12'>
+                        <img src={ProfilePic} alt="Steve Morales" className='w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-blue-500/20' />
                     </div>
-                </div>
 
+                    <div className='lg:w-7/12 space-y-6'>
+                        <div>
+                            <h1 className="text-5xl lg:text-6xl font-extrabold text-white mb-2">Steve Morales</h1>
+                            <h2 className="text-2xl lg:text-3xl font-bold text-blue-400 mb-6">Software Engineer</h2>
+                        </div>
 
-                <div className='sm:hidden flex flex-1 flex-col items-center justify-center px-4'>
-                    <img src={ProfilePic} alt="Profile" className='w-8/12 rounded-lg shadow-2xl' />
-                    <div className='p-4 sm:hidden'>
-                        <h1 className="text-2xl font-bold text-white mb-4 text-center">A Jack of All Trades</h1>
-                        <p className='text-gray-300 mb-2'>Highly skilled software engineer with a strong background in computer science</p>
-                        <p className='text-gray-300 mb-2'>Proficient in multiple programming languages and frameworks</p>
-                        <p className='text-gray-300 mb-2'>Expertise in building robust and scalable applications</p>
-                        <p className='text-gray-300 mb-2'>Commitment to writing clean and maintainable code</p>
-                        <p className='text-gray-300 mb-2'>Proven track record of successful project delivery</p>
+                        <p className='text-xl text-gray-300 leading-relaxed'>
+                            Computer Engineering professional with proven expertise in building scalable applications,
+                            leading cross-functional teams, and delivering innovative solutions across full-stack development,
+                            robotics, AR/VR, and automation.
+                        </p>
+
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
+                            <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Technical Leadership</h3>
+                                <p className='text-gray-300'>Led multiple teams delivering complex projects from concept to deployment</p>
+                            </div>
+                            <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Full-Stack Development</h3>
+                                <p className='text-gray-300'>ReactJS, Vue.js, Python, Java, Android, ROS, Docker</p>
+                            </div>
+                            <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Innovation Focus</h3>
+                                <p className='text-gray-300'>AR/VR surgical solutions, autonomous vehicles, automation tools</p>
+                            </div>
+                            <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Proven Results</h3>
+                                <p className='text-gray-300'>8+ successful projects spanning web, mobile, and embedded systems</p>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-wrap gap-4 pt-4'>
+                            <a
+                                href="#contact"
+                                className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+                            >
+                                Get In Touch
+                            </a>
+                            <a
+                                href="#projects"
+                                className='bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg border border-gray-600 transition-all duration-300 transform hover:scale-105'
+                            >
+                                View Projects
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-
-            </section>
-
-
-            <section className="p-8 bg-gray-900 flex items-center justify-center">
-                <div className="grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 md:gap-16">
-                    <Card
-                        url={"projects/my-country"}
-                        title={"My Country"}
-                        image={MyCountryImg}
-                        description={"Integrating the Rest Countries API, a user can obtain and search knowledge from a country. Allowing for different ways to search for any of the 250 countries!"}
-                    />
-                    
-                    <Card
-                        url="projects/marvin"
-                        title="MA.R.V.I.N"
-                        image={Hololens}
-                        description="Working as a team lead to create an innovate solution for surgery operations. Utilizing AR technology to create a digital enviornemtn to enhance surgery."
-                    />
-
-                    <Card
-                        url="projects/autonomous-vehicles"
-                        title="Autonomous Vehicles - Robotics"
-                        image={GroupPic}
-                        description="As a member of a team of 3, we built a scaled car that can drive autonomously.This was achieved using ROS and Docker to run software that works in tandem with hardware such as a camera and lidar.Additionally, using what we learned in 5 weeks, we presented a software project which can be used to improve autonomous driving such as Canny Filtering."
-                    />
-
-                    <Card
-                        url="projects/zoo-keeper"
-                        title="Zoo Keeper"
-                        image={ZooKeeper}
-                        description="Working with my peers, I led a small team to create an Android app using Android Studio.Our app replicated the functionality of the San Diego Zoo app.Interesting concepts in this project include graphs, databases, design patterns, Git/Github, and UI."
-                    />
-
-                    <Card
-                        url="projects/delivAero"
-                        title="delivAero"
-                        image={DelivAeroCardImg}
-                        description="Built a static website using Vue JS. The purpose of the website is to showcase an organization/club.Here I learn and explore the world of web-development and basic principles and fundamentals which are later used to learn ReactJS."
-                    />
-
-                    <Card
-                        url="projects/otto"
-                        title="Otto"
-                        image={Otto}
-                        description="An individual project which automates user input on the Windows operating system. Using Python libraries, it automates clicking, mouse movement, take screenshots, loop interactions, and keyboard events. Using a GUI, a user can create a series of steps they want automated."
-                    />
-
-                    <Card
-                        url="projects/auto-jober"
-                        title="Auto Jober"
-                        image={AutoJoberImg}
-                        description={"Leading a team of four, throughout a quarter (~3 months) we create a desktop application capable of applying to jobs on LinkedIn. However, many challenges were faced not only personally, but also as a team. Despite these challenges, we overcome them to deliver and showcase our project."}
-                    />
-
-                    <Card
-                        url="projects/unity-script"
-                        title="Unity 2D Movement Script"
-                        image={UnityImg}
-                        description={"This small project allows 2D sprites in unity to move as a platformer. This includes jumping, moving left and right, collision detection, and sprite flipping. The purpose of this project is to make a free resource for novice programers."}
-                    />
                 </div>
             </section>
 
-            <section className='p-8 bg-gray-950 flex flex-col sm:flex-row items-center justify-evenly gap-8'>
-                <div className='w-full sm:w-2/6'>
-                    <IconLink
-                        icon_component={<FaLinkedin size={100} />}
-                        url={"https://www.linkedin.com/in/steve--morales/"}
-                        link_text={"LinkedIn"}
-                        hover_text={"https://www.linkedin.com/in/steve--morales/"}
-                    />
+            <section className="py-16 bg-gray-900/50">
+                <div className='max-w-7xl mx-auto px-8'>
+                    <h2 className='text-4xl font-extrabold text-white text-center mb-12'>Featured Projects</h2>
+                    <div className="grid md:grid-cols-3 gap-8 mb-8">
+                        <Card
+                            url="projects/marvin"
+                            title="MA.R.V.I.N (Team Lead)"
+                            image={Hololens}
+                            description="Led development of an AR surgical assistant using HoloLens 2, creating an innovative solution to enhance surgical operations with augmented reality technology."
+                        />
+                        <Card
+                            url="projects/autonomous-vehicles"
+                            title="Autonomous Vehicles - Robotics"
+                            image={GroupPic}
+                            description="Built and programmed a self-driving scaled car using ROS and Docker, integrating camera and lidar sensors for autonomous navigation."
+                        />
+                        <Card
+                            url="projects/auto-jober"
+                            title="Auto Jober (Team Lead)"
+                            image={AutoJoberImg}
+                            description="Led a team of four to develop a desktop application that automates LinkedIn job applications, overcoming technical and team challenges to deliver a working solution."
+                        />
+                    </div>
                 </div>
+            </section>
 
 
-                <div className='w-full sm:w-2/6'>
-                    <IconLink
-                        icon_component={<FaGithub size={100} />}
-                        url={"https://github.com/Steve-Morales/"}
-                        link_text={"GitHub"}
-                        hover_text={"https://github.com/Steve-Morales/"}
-                    />
+            <section id="projects" className="py-16 bg-gray-950">
+                <div className='max-w-7xl mx-auto px-8'>
+                    <h2 className='text-4xl font-extrabold text-white text-center mb-4'>All Projects</h2>
+                    <p className='text-gray-400 text-center mb-12 text-lg'>A comprehensive showcase of technical projects demonstrating versatility and expertise</p>
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <Card
+                            url={"projects/my-country"}
+                            title={"My Country"}
+                            image={MyCountryImg}
+                            description={"REST API integration project enabling users to search and explore data from 250+ countries with multiple search functionalities."}
+                        />
+
+                        <Card
+                            url="projects/zoo-keeper"
+                            title="Zoo Keeper (Team Lead)"
+                            image={ZooKeeper}
+                            description="Led development of an Android app replicating San Diego Zoo's functionality, implementing graphs, databases, and design patterns."
+                        />
+
+                        <Card
+                            url="projects/delivAero"
+                            title="delivAero"
+                            image={DelivAeroCardImg}
+                            description="Built a responsive static website using Vue.js to showcase an organization, establishing foundation in modern web development."
+                        />
+
+                        <Card
+                            url="projects/otto"
+                            title="Otto"
+                            image={Otto}
+                            description="Developed a Python automation tool with GUI for Windows, automating mouse movements, clicks, screenshots, and keyboard events."
+                        />
+
+                        <Card
+                            url="projects/unity-script"
+                            title="Unity 2D Movement Script"
+                            image={UnityImg}
+                            description={"Created a free open-source Unity script for 2D platformer movement, including jumping, collision detection, and sprite animations."}
+                        />
+                    </div>
                 </div>
+            </section>
 
-                <div
-                    className='w-full sm:w-2/6'
-                    onClick={(e) => { window.open('mailto:steve.morales22001@gmail.com?subject=SWE Opportunity'); }}>
-                    <IconLink
-                        icon_component={<SiGmail size={100} />}
-                        link_text={"Email"}
-                        hover_text={"steve.morales22001@gmail.com"}
-                    />
+            <section id="contact" className='py-20 bg-gradient-to-b from-gray-900 to-gray-950'>
+                <div className='max-w-5xl mx-auto px-8'>
+                    <div className='text-center mb-12'>
+                        <h2 className='text-4xl font-extrabold text-white mb-4'>Let's Connect</h2>
+                        <p className='text-xl text-gray-300'>Open to new opportunities and collaborations</p>
+                    </div>
+
+                    <div className='flex flex-col sm:flex-row items-center justify-center gap-8 lg:gap-16'>
+                        <a
+                            href="https://www.linkedin.com/in/steve--morales/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='group'
+                        >
+                            <IconLink
+                                icon_component={<FaLinkedin size={100} />}
+                                url={"https://www.linkedin.com/in/steve--morales/"}
+                                link_text={"LinkedIn"}
+                                hover_text={"linkedin.com/in/steve--morales"}
+                            />
+                        </a>
+
+                        <a
+                            href="https://github.com/Steve-Morales/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='group'
+                        >
+                            <IconLink
+                                icon_component={<FaGithub size={100} />}
+                                url={"https://github.com/Steve-Morales/"}
+                                link_text={"GitHub"}
+                                hover_text={"github.com/Steve-Morales"}
+                            />
+                        </a>
+
+                        <div
+                            onClick={(e) => { window.open('mailto:steve.morales22001@gmail.com?subject=SWE Opportunity'); }}
+                            className='cursor-pointer group'
+                        >
+                            <IconLink
+                                icon_component={<SiGmail size={100} />}
+                                link_text={"Email"}
+                                hover_text={"steve.morales22001@gmail.com"}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='mt-16 text-center'>
+                        <a
+                            href="mailto:steve.morales22001@gmail.com?subject=SWE Opportunity"
+                            className='inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl text-lg'
+                        >
+                            Reach Out About Opportunities
+                        </a>
+                    </div>
                 </div>
-
             </section>
 
             <Footer />
