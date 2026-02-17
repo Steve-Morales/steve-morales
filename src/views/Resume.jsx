@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode, FaShieldAlt } from 'react-icons/fa';
+import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -194,8 +194,8 @@ export default function Resume() {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
                                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-yellow-500/10 rounded-full blur-2xl"></div>
                                 <div className="relative flex items-center gap-6">
-                                    <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/50">
-                                        <FaShieldAlt className="text-white text-4xl" />
+                                    <div className="flex-shrink-0">
+                                        <img src="/image.png" alt="CompTIA Security+" className="w-24 h-24 object-contain" />
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-2xl font-bold text-white mb-2">CompTIA Security+</h3>
