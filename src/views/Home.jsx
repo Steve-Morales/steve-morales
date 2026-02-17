@@ -14,8 +14,9 @@ import Navbar from '../components/Navbar';
 import Card from '../components/Card';
 import IconLink from '../components/IconLink';
 import Footer from '../components/Footer';
+import Skills from '../components/Skills';
 
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 
@@ -37,40 +38,48 @@ export default function Home() {
                         </div>
 
                         <p className='text-xl text-gray-300 leading-relaxed'>
-                            Computer Engineering professional with proven expertise in building scalable applications,
-                            leading cross-functional teams, and delivering innovative solutions across full-stack development,
-                            robotics, AR/VR, and automation.
+                            Front-End Developer at Tactical Engineering and Analysis with expertise in C++, Python, and JavaScript.
+                            Specialized in performance optimization, test automation, and building robust software solutions.
+                            CompTIA Security+ certified with a strong focus on quality engineering and system reliability.
                         </p>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
                             <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
-                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Technical Leadership</h3>
-                                <p className='text-gray-300'>Led multiple teams delivering complex projects from concept to deployment</p>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Performance Optimization</h3>
+                                <p className='text-gray-300'>Reduced I/O operations by 90% through efficient system design and profiling</p>
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
-                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Full-Stack Development</h3>
-                                <p className='text-gray-300'>ReactJS, Vue.js, Python, Java, Android, ROS, Docker</p>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Quality Engineering</h3>
+                                <p className='text-gray-300'>Developed 100+ unit tests and standardized QA procedures across teams</p>
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
-                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Innovation Focus</h3>
-                                <p className='text-gray-300'>AR/VR surgical solutions, autonomous vehicles, automation tools</p>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Systems Programming</h3>
+                                <p className='text-gray-300'>Expert in C++, Linux, Docker, and distributed system architecture</p>
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
-                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Proven Results</h3>
-                                <p className='text-gray-300'>8+ successful projects spanning web, mobile, and embedded systems</p>
+                                <h3 className='text-blue-400 font-bold text-lg mb-2'>Security Certified</h3>
+                                <p className='text-gray-300'>CompTIA Security+ certified with focus on secure software development</p>
                             </div>
                         </div>
 
                         <div className='flex flex-wrap gap-4 pt-4'>
                             <a
+                                href="/Steve_Morales_Resume.pdf"
+                                download
+                                className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2'
+                            >
+                                <FaDownload />
+                                Download Resume
+                            </a>
+                            <a
                                 href="#contact"
-                                className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+                                className='bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg border border-gray-600 transition-all duration-300 transform hover:scale-105'
                             >
                                 Get In Touch
                             </a>
                             <a
                                 href="#projects"
-                                className='bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg border border-gray-600 transition-all duration-300 transform hover:scale-105'
+                                className='bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg border border-gray-600 transition-all duration-300 transform hover:scale-105'
                             >
                                 View Projects
                             </a>
@@ -79,7 +88,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="py-16 bg-gray-900/50">
+            <Skills />
+
+            <section className="py-16 bg-gray-950">
                 <div className='max-w-7xl mx-auto px-8'>
                     <h2 className='text-4xl font-extrabold text-white text-center mb-12'>Featured Projects</h2>
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -106,7 +117,7 @@ export default function Home() {
             </section>
 
 
-            <section id="projects" className="py-16 bg-gray-950">
+            <section id="projects" className="py-16 bg-gray-900">
                 <div className='max-w-7xl mx-auto px-8'>
                     <h2 className='text-4xl font-extrabold text-white text-center mb-4'>All Projects</h2>
                     <p className='text-gray-400 text-center mb-12 text-lg'>A comprehensive showcase of technical projects demonstrating versatility and expertise</p>
