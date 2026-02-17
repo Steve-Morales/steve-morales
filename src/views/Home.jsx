@@ -64,8 +64,8 @@ export default function Home() {
 
                         <div className='flex flex-wrap gap-4 pt-4'>
                             <a
-                                href="/Steve_Morales_Resume.pdf"
-                                download
+                                href="/Steve_Morales_Resume_2026.pdf"
+                                download="Steve_Morales_Resume.pdf"
                                 className='bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2'
                             >
                                 <FaDownload />

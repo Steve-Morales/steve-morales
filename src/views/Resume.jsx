@@ -89,7 +89,7 @@ export default function Resume() {
                             </div>
                             <a
                                 href="/Steve_Morales_Resume_2026.pdf"
-                                download
+                                download="Steve_Morales_Resume.pdf"
                                 className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
                             >
                                 <FaDownload />
