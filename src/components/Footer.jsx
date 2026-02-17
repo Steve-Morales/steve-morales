@@ -18,6 +18,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/resume" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  Resume
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">
                   Contact
                 </a>
