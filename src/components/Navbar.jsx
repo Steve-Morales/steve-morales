@@ -11,6 +11,9 @@ function DropdownMenu({ onClose }) {
                         <li><a href='/' className="text-gray-200 hover:text-white">Home</a></li>
                         <hr className="h-px bg-gray-700 border-0" />
 
+                        <li><a href='/resume' className="text-gray-200 hover:text-white">Resume</a></li>
+                        <hr className="h-px bg-gray-700 border-0" />
+
                         <li><a href='/contact' className="text-gray-200 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
@@ -36,6 +39,7 @@ export default function Navbar() {
 
                 <ul className="flex w-fit">
                     <li><a href="/" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Home</a></li>
+                    <li><a href="/resume" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Resume</a></li>
                     <li><a href="/contact" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Contact</a></li>
                 </ul>
             </nav>

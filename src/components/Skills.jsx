@@ -16,7 +16,7 @@ const skillsData = [
         category: "Technologies & Tools",
         items: [
             { name: "Git/GitLab", icon: <SiGit className="text-5xl" />, color: "text-orange-500", highlighted: true },
-            { name: "Bitbucket", icon: <SiBitbucket className="text-5xl" />, color: "text-blue-500" },
+            { name: "Bitbucket", icon: <SiBitbucket className="text-5xl" />, color: "text-blue-500", highlighted: true },
             { name: "Linux", icon: <SiLinux className="text-5xl" />, color: "text-gray-200", highlighted: true },
             { name: "Docker", icon: <SiDocker className="text-5xl" />, color: "text-blue-400" },
             { name: "AWS EC2", icon: <SiAmazonaws className="text-5xl" />, color: "text-orange-400", highlighted: true },

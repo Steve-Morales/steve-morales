@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 import Root from './routes/root';
 import Contact from './views/Contact';
+import Resume from './views/Resume';
 
 // project pages
 import AutonomousVechicles from './views/projects/AutonomousVehicles';
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path:'/contact',
     element: <Contact/>,
+  },
+  {
+    path:'/resume',
+    element: <Resume/>,
   },
   {
     path: "/projects/autonomous-vehicles",
