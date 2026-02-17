@@ -84,7 +84,7 @@ export default function Resume() {
                             <p className="text-gray-400">steve.morales22001@gmail.com | 323-849-7222</p>
                         </div>
                         <a
-                            href="/Steve_Morales_Resume.pdf"
+                            href="/Steve_Morales_Resume_2026.pdf"
                             download
                             className="mt-4 md:mt-0 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
                         >
