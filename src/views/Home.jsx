@@ -45,7 +45,7 @@ export default function Home() {
             <section className="min-h-screen flex flex-col justify-center px-8 py-16">
                 <div className='flex flex-col lg:flex-row items-center justify-center gap-12 max-w-7xl mx-auto'>
                     <div className='lg:w-5/12'>
-                        <img src={ProfilePic} alt="Steve Morales" className='w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-blue-500/20' />
+                        <img src={ProfilePic} alt="Steve Morales" className='w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-blue-500/20' loading="eager" />
                     </div>
 
                     <div className='lg:w-7/12 space-y-6'>
