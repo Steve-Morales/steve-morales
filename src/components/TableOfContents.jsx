@@ -6,17 +6,26 @@ export default function TableOfContents({ sections }) {
     // default sections if none provided
     sections = sections?sections : [{id: "", title: ""}]
 
+    const handleClick = (e, sectionId) => {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
                         setActiveSection(entry.target.id);
                     }
                 });
             },
             {
-                rootMargin: "-20% 0px -70% 0px",
+                rootMargin: "-10% 0px -60% 0px",
+                threshold: [0, 0.25, 0.5, 0.75, 1],
             }
         );
 
@@ -47,9 +56,10 @@ export default function TableOfContents({ sections }) {
                     <li key={section.id}>
                         <a
                             href={`#${section.id}`}
-                            className={`text-base sm:text-xl md:text-2xl transition-colors ${
+                            onClick={(e) => handleClick(e, section.id)}
+                            className={`text-base sm:text-xl md:text-2xl transition-all duration-300 ease-in-out ${
                                 activeSection === section.id
-                                    ? "text-blue-300 font-bold underline"
+                                    ? "text-blue-300 font-bold underline scale-105"
                                     : "text-blue-400 hover:text-blue-300 hover:underline"
                             }`}
                         >
