@@ -1,26 +1,34 @@
 import React from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-800 p-6">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="text-white">
-          <p>&copy; 2023 Steve A. Morales</p>
-          <p>All rights reserved.</p>
-        </div>
-        <div>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="/" className="text-white hover:text-gray-900 hover:bg-gray-300 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="text-white hover:text-gray-900 hover:bg-gray-300 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">
-                Contact
-              </a>
-            </li>
-          </ul>
+    <footer className="bg-gray-900 border-t border-gray-800 py-8">
+      <div className="container mx-auto px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div className="text-gray-400 text-sm text-center md:text-left">
+            <p>&copy; {currentYear} Steve A. Morales. All rights reserved.</p>
+          </div>
+          <div>
+            <ul className="flex space-x-6">
+              <li>
+                <a href="/" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/resume" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

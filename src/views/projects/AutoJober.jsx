@@ -59,7 +59,7 @@ function Content() {
             <p class="content-p">In the end, the inexperience and lack of time made it really difficult to finish strong.</p>
             <h1 class="content-h1" id="event_img">Event Image</h1>
             <div class="pb-12">
-                <img src={EventImage}/>
+                <img src={EventImage} alt="Auto Jober event participants"/>
             </div>
         </>
     );
