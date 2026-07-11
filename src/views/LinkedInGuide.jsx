@@ -13,8 +13,7 @@ const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || process.env
 
 async function saveEmail(email) {
     if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-        console.warn('Supabase env vars not configured — skipping email save');
-        return;
+        throw new Error('Supabase credentials not available — email not saved.');
     }
     const res = await fetch(`${SUPABASE_URL}/rest/v1/email_leads`, {
         method: 'POST',
