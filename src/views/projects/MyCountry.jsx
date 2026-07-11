@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Main from '../../assets/MyCountry/my_country.gif';
 
 import Link from "../../components/Link";
@@ -14,6 +15,11 @@ export default function MyCountry() {
 
     return (
         <>
+            <Helmet>
+                <title>My Country - REST API Project | Steve Morales</title>
+                <meta name="description" content="React app integrating the REST Countries API to let users search information about 250+ countries using multiple search modes. Demonstrates API integration and React state management." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/my-country" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}

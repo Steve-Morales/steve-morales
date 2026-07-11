@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ProjectView from "../ProjectView";
 
 import AppImg from '../../assets/ZooKeeper/zoo_keeper_app_demo.png'
@@ -15,6 +16,11 @@ export default function ZooKeeper() {
 
     return (
         <>
+            <Helmet>
+                <title>Zoo Keeper - Android App | Steve Morales</title>
+                <meta name="description" content="Led a team of six to build an Android app replicating San Diego Zoo functionality. Used Agile, Room database, graphs, Dijkstra's algorithm, and design patterns in Java." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/zoo-keeper" />
+            </Helmet>
             <ProjectView
                 imgSrc={AppImg}
                 sections={sections}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import InspectorImg from '../../assets/Unity2DMovement/unity_2d_movement_inspector.png';
 import Main from '../../assets/Unity2DMovement/unity_2d_movement_main.gif';
 
@@ -12,6 +13,11 @@ export default function Unity() {
 
     return (
         <>
+            <Helmet>
+                <title>Unity 2D Movement Script | Steve Morales</title>
+                <meta name="description" content="Free open-source Unity C# script for 2D platformer movement. Supports configurable speed, multi-jump, sprite flipping, and collision detection. Designed for novice Unity developers." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/unity-script" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}

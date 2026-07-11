@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ProjectView from "../ProjectView";
 
 import Main from '../../assets/DelivAero/delivAero_main.gif';
@@ -13,6 +14,11 @@ export default function delivAero() {
 
     return (
         <>
+            <Helmet>
+                <title>delivAero - Vue.js Static Website | Steve Morales</title>
+                <meta name="description" content="Built a responsive static website using Vue.js and Bulma for an organization. First web development project covering HTML, CSS, JavaScript, and component-based architecture." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/deliv-aero" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}

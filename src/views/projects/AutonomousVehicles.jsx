@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 
 import ProjectView from "../ProjectView";
 
@@ -18,6 +19,11 @@ export default function AutonomousVechicles() {
 
     return (
         <>
+            <Helmet>
+                <title>Autonomous Vehicles - Robotics | Steve Morales</title>
+                <meta name="description" content="Built and programmed a self-driving scaled car using ROS, Docker, and a Jetson Nano SBC. Implemented lane detection with OpenCV and PID controllers for steering." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/autonomous-vehicles" />
+            </Helmet>
             <ProjectView
                 imgSrc={GroupPic}
                 sections={sections}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Main from '../../assets/AutoJober/auto_jober_main.gif';
 import EventImage from '../../assets/AutoJober/auto_jober_participants.jpg';
 
@@ -14,6 +15,11 @@ export default function AutoJober() {
 
     return (
         <>
+            <Helmet>
+                <title>Auto Jober - LinkedIn Job Automation | Steve Morales</title>
+                <meta name="description" content="Led a team to build a desktop application that automates LinkedIn job applications using web scraping. A Python-based team project from UC San Diego's IEEE chapter." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/auto-jober" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}

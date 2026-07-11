@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaDownload, FaGraduationCap, FaBriefcase, FaCertificate, FaCode } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -94,6 +95,11 @@ export default function Resume() {
 
     return (
         <div className="min-h-screen bg-gray-950">
+            <Helmet>
+                <title>Resume | Steve A. Morales - Software Engineer</title>
+                <meta name="description" content="Resume of Steve A. Morales, Software Engineer at Tactical Engineering and Analysis. Experienced in C++, Python, JavaScript, Docker, Linux, and test automation. CompTIA Security+ certified." />
+                <link rel="canonical" href="https://stevemorales.dev/resume" />
+            </Helmet>
             <Navbar />
             <div className="bg-gray-900 py-12">
                 <div className="max-w-6xl mx-auto px-8">

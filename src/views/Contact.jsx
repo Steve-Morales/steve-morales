@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Navbar from "../components/Navbar";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import Footer from "../components/Footer";
@@ -5,6 +6,11 @@ import Footer from "../components/Footer";
 export default function Contact() {
     return (
         <div className="bg-gray-950 min-h-screen">
+            <Helmet>
+                <title>Contact Steve Morales | Software Engineer</title>
+                <meta name="description" content="Get in touch with Steve Morales, Software Engineer. Available for full-time roles, full-stack development, robotics, and AR/VR opportunities." />
+                <link rel="canonical" href="https://stevemorales.dev/contact" />
+            </Helmet>
             <Navbar />
 
             <div className="container mx-auto px-4 py-16">

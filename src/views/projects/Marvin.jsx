@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Main from '../../assets/MARVIN/marvin_demo.gif';
 
 import Link from "../../components/Link";
@@ -16,6 +17,11 @@ export default function Marvin()
 
     return (
         <>
+            <Helmet>
+                <title>M.A.R.V.I.N - AR Surgical Assistant | Steve Morales</title>
+                <meta name="description" content="Led development of an AR surgical assistant using Microsoft HoloLens 2. Integrated Unity, MRTK, WebRTC, and 3D organ modeling from CT/MRI scans." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/marvin" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}

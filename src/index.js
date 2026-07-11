@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PageTracker from './components/PageTracker';
 
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     element: <PageTracker><ZooKeeper/></PageTracker>,
   },
   {
-    path: "/projects/delivAero",
+    path: "/projects/deliv-aero",
     element: <PageTracker><DelivAero/></PageTracker>,
   },
   {
@@ -73,11 +73,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

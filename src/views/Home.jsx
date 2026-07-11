@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 // Assets
 import Hololens from '../assets/MARVIN/HOLOLENS-2.png';
 import ProfilePic from '../assets/profile_pic.jpg';
@@ -40,6 +42,11 @@ export default function Home() {
 
     return (
         <div className="bg-gray-950 min-h-screen">
+            <Helmet>
+                <title>Steve A. Morales | Software Engineer</title>
+                <meta name="description" content="Steve Morales is a Software Engineer specializing in C++, Python, and JavaScript. Front-End Developer at Tactical Engineering and Analysis. CompTIA Security+ certified." />
+                <link rel="canonical" href="https://stevemorales.dev/" />
+            </Helmet>
             <Navbar />
 
             <section className="min-h-screen flex flex-col justify-center px-8 py-16">
@@ -156,7 +163,7 @@ export default function Home() {
                         />
 
                         <Card
-                            url="projects/delivAero"
+                            url="projects/deliv-aero"
                             title="delivAero"
                             image={DelivAeroCardImg}
                             description="Built a responsive static website using Vue.js to showcase an organization, establishing foundation in modern web development."

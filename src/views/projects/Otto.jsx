@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Main from '../../assets/Otto/otto_demo.png';
 
 import ProjectView from '../ProjectView';
@@ -13,6 +14,11 @@ export default function Otto() {
 
     return (
         <>
+            <Helmet>
+                <title>Otto - Python Automation Tool | Steve Morales</title>
+                <meta name="description" content="Developed Otto, a Python Windows application using Tkinter and PyAutoGUI to automate mouse movements, keyboard input, and screenshots. Supports looped automation sequences." />
+                <link rel="canonical" href="https://stevemorales.dev/projects/otto" />
+            </Helmet>
             <ProjectView
                 imgSrc={Main}
                 sections={sections}
