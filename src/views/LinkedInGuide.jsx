@@ -8,10 +8,14 @@ import {
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY;
+const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 
 async function saveEmail(email) {
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        console.warn('Supabase env vars not configured — skipping email save');
+        return;
+    }
     const res = await fetch(`${SUPABASE_URL}/rest/v1/email_leads`, {
         method: 'POST',
         headers: {
@@ -28,18 +32,14 @@ async function saveEmail(email) {
     }
 }
 
-async function downloadPdf(path, filename) {
-    const response = await fetch(path);
-    if (!response.ok) throw new Error('Download failed');
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
+function triggerDownload(path, filename) {
     const link = document.createElement('a');
-    link.href = url;
+    link.href = path;
     link.download = filename;
+    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
 }
 
 function useCountUp(target, duration = 1500, shouldStart = false) {
@@ -393,7 +393,7 @@ function ScorecardCard({ visible }) {
         setErrorMsg('');
         try {
             await saveEmail(email.trim().toLowerCase());
-            await downloadPdf('/LinkedIn_Scorecard_Free.pdf', 'LinkedIn_Scorecard_Free.pdf');
+            triggerDownload('/LinkedIn_Scorecard_Free.pdf', 'LinkedIn_Scorecard_Free.pdf');
             setStatus('success');
         } catch (err) {
             console.error(err);
@@ -451,7 +451,7 @@ function ScorecardCard({ visible }) {
                         <p className="text-white font-bold text-lg mb-1">Download started!</p>
                         <p className="text-gray-400 text-sm">Check downloads for <span className="text-green-400 font-medium">LinkedIn_Scorecard_Free.pdf</span></p>
                         <button
-                            onClick={() => downloadPdf('/LinkedIn_Scorecard_Free.pdf', 'LinkedIn_Scorecard_Free.pdf')}
+                            onClick={() => triggerDownload('/LinkedIn_Scorecard_Free.pdf', 'LinkedIn_Scorecard_Free.pdf')}
                             className="mt-4 text-green-400 hover:text-green-300 text-sm underline underline-offset-2 transition-colors"
                         >
                             Download again

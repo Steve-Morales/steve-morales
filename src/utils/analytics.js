@@ -1,4 +1,6 @@
-const ANALYTICS_ENDPOINT = `${process.env.REACT_APP_SUPABASE_URL}/functions/v1/track-analytics`;
+const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+const ANALYTICS_ENDPOINT = `${SUPABASE_URL}/functions/v1/track-analytics`;
 
 function getOrCreateSessionId() {
   let sessionId = sessionStorage.getItem('session_id');
@@ -25,7 +27,7 @@ export async function trackPageView(pagePath) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.REACT_APP_SUPABASE_ANON_KEY}`,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
       },
       body: JSON.stringify({
         page_path: pagePath,
@@ -46,7 +48,7 @@ export async function getAnalyticsStats(days = 7) {
       `${ANALYTICS_ENDPOINT}?type=stats&days=${days}`,
       {
         headers: {
-          'Authorization': `Bearer ${process.env.REACT_APP_SUPABASE_ANON_KEY}`,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
         },
       }
     );
