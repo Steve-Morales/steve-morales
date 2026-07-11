@@ -7,11 +7,9 @@ import {
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import PageTracker from './components/PageTracker';
 
 import Root from './routes/root';
 import Contact from './views/Contact';
-import Resume from './views/Resume';
 
 // project pages
 import AutonomousVechicles from './views/projects/AutonomousVehicles';
@@ -26,47 +24,43 @@ import MyCountry from './views/projects/MyCountry';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageTracker><Root /></PageTracker>,
+    element: <Root />,
   },
   {
     path:'/contact',
-    element: <PageTracker><Contact/></PageTracker>,
-  },
-  {
-    path:'/resume',
-    element: <PageTracker><Resume/></PageTracker>,
+    element: <Contact/>,
   },
   {
     path: "/projects/autonomous-vehicles",
-    element: <PageTracker><AutonomousVechicles/></PageTracker>,
+    element: <AutonomousVechicles/>,
   },
   {
     path: "/projects/zoo-keeper",
-    element: <PageTracker><ZooKeeper/></PageTracker>,
+    element: <ZooKeeper/>,
   },
   {
     path: "/projects/delivAero",
-    element: <PageTracker><DelivAero/></PageTracker>,
+    element: <DelivAero/>,
   },
   {
     path: "/projects/otto",
-    element: <PageTracker><Otto/></PageTracker>,
+    element: <Otto/>,
   },
   {
     path: "/projects/auto-jober",
-    element: <PageTracker><AutoJober/></PageTracker>,
+    element: <AutoJober/>,
   },
   {
     path: "/projects/unity-script",
-    element: <PageTracker><Unity/></PageTracker>,
+    element: <Unity/>,
   },
   {
     path: "/projects/marvin",
-    element: <PageTracker><Marvin/></PageTracker>,
+    element: <Marvin/>,
   },
   {
     path: "/projects/my-country",
-    element: <PageTracker><MyCountry/></PageTracker>,
+    element: <MyCountry/>,
   },
 ]);
 

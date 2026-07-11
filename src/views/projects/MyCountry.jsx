@@ -68,7 +68,7 @@ function Content() {
                 I first noticed this problem when I wanted to update the results as soon as the user changes the type of search.
                 The reason this problem occurred is due to the results only updating when there was a change in the search bar.
                 To solve this issue, I used a useEffect hook which used a dependency of the radio buttons (search options) states which would call the search function on the change of state.
-                The next state management issue occurred when adding a spinner component (one of these <img src='https://media.tenor.com/OzAxe6-8KvkAAAAC/blue_spinner.gif' width={'30rem'} className='inline' alt="loading spinner" />).
+                The next state management issue occurred when adding a spinner component (one of these <img src='https://media.tenor.com/OzAxe6-8KvkAAAAC/blue_spinner.gif' width={'30rem'} className='inline' />).
                 I wanted the spinner component to be shown only when the information was still loading.
                 Sounds simple enough, but the main issue was determining when to update the state to show the spinner component.
                 I used the same solution as last time with a useEffect hook, but created a new function that checks for a condition before updating the state.
