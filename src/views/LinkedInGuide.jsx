@@ -7,26 +7,36 @@ import {
 } from 'react-icons/fa';
 
 
-const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+const SUPABASE_URL =
+    process.env.REACT_APP_SUPABASE_URL ||
+    process.env.VITE_SUPABASE_URL ||
+    'https://cltnsvzrxcvywraldwtm.supabase.co';
+
+const SUPABASE_ANON_KEY =
+    process.env.REACT_APP_SUPABASE_ANON_KEY ||
+    process.env.VITE_SUPABASE_ANON_KEY ||
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNsdG5zdnpyeGN2eXdyYWxkd3RtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3ODQxMDAsImV4cCI6MjA5OTM2MDEwMH0.q520g_oIox7tDHpDie3y17ZZTvbr9Qv9w04OEm49nPY';
 
 async function saveEmail(email) {
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-        throw new Error('Supabase credentials not available — email not saved.');
+    const url = `${SUPABASE_URL}/rest/v1/email_leads`;
+    let res;
+    try {
+        res = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                apikey: SUPABASE_ANON_KEY,
+                Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                Prefer: 'return=minimal',
+            },
+            body: JSON.stringify({ email, source: 'scorecard' }),
+        });
+    } catch (networkErr) {
+        throw new Error(`Network error: ${networkErr.message}`);
     }
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/email_leads`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            apikey: SUPABASE_ANON_KEY,
-            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-            Prefer: 'return=minimal',
-        },
-        body: JSON.stringify({ email, source: 'scorecard' }),
-    });
     if (!res.ok) {
         const text = await res.text();
-        throw new Error(text || `HTTP ${res.status}`);
+        throw new Error(`HTTP ${res.status}: ${text}`);
     }
 }
 
@@ -391,9 +401,9 @@ function ScorecardCard({ visible }) {
             triggerDownload('/LinkedIn_Scorecard_Free.pdf', 'LinkedIn_Scorecard_Free.pdf');
             setStatus('success');
         } catch (err) {
-            console.error(err);
+            console.error('Email save failed:', err);
             setStatus('error');
-            setErrorMsg('Something went wrong. Please try again.');
+            setErrorMsg(err.message || 'Something went wrong. Please try again.');
         }
     };
 
