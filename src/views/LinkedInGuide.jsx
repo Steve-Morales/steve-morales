@@ -5,7 +5,7 @@ import {
     FaLock, FaUnlock, FaEnvelope, FaChartLine, FaUsers,
     FaRocket, FaBullseye,
 } from 'react-icons/fa';
-import Footer from '../components/Footer';
+
 
 const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
@@ -208,7 +208,6 @@ export default function LinkedInGuide() {
                 </div>
             </section>
 
-            <Footer />
         </div>
     );
 }
