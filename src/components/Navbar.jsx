@@ -15,6 +15,9 @@ function DropdownMenu({ onClose }) {
                         <hr className="h-px bg-gray-700 border-0" />
 
                         <li><a href='/contact' className="text-gray-200 hover:text-white">Contact</a></li>
+                        <hr className="h-px bg-gray-700 border-0" />
+
+                        <li><a href='/linkedin-guide' className="text-blue-400 hover:text-blue-300 font-semibold">LinkedIn Guide</a></li>
                     </ul>
                 </div>
 
@@ -41,6 +44,7 @@ export default function Navbar() {
                     <li><a href="/" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Home</a></li>
                     <li><a href="/resume" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Resume</a></li>
                     <li><a href="/contact" className="text-gray-200 hover:text-white hover:bg-gray-700 bg-opacity-50 transition-all duration-300 rounded-full px-4 py-2">Contact</a></li>
+                    <li><a href="/linkedin-guide" className="text-white bg-blue-600 hover:bg-blue-500 transition-all duration-300 rounded-full px-4 py-2 font-semibold">LinkedIn Guide</a></li>
                 </ul>
             </nav>
 

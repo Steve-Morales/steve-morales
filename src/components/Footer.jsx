@@ -27,6 +27,11 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <a href="/linkedin-guide" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 font-medium">
+                  LinkedIn Guide
+                </a>
+              </li>
             </ul>
           </div>
         </div>

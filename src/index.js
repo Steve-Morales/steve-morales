@@ -12,6 +12,7 @@ import PageTracker from './components/PageTracker';
 import Root from './routes/root';
 import Contact from './views/Contact';
 import Resume from './views/Resume';
+import LinkedInGuide from './views/LinkedInGuide';
 
 // project pages
 import AutonomousVechicles from './views/projects/AutonomousVehicles';
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path:'/resume',
     element: <PageTracker><Resume/></PageTracker>,
+  },
+  {
+    path: '/linkedin-guide',
+    element: <PageTracker><LinkedInGuide/></PageTracker>,
   },
   {
     path: "/projects/autonomous-vehicles",
