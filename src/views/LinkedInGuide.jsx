@@ -5,7 +5,6 @@ import {
     FaLock, FaUnlock, FaEnvelope, FaChartLine, FaUsers,
     FaRocket, FaBullseye,
 } from 'react-icons/fa';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
@@ -155,8 +154,6 @@ export default function LinkedInGuide() {
                 <meta name="description" content="Free LinkedIn scorecard + full 30-day playbook for entry and mid-level software engineers. Make recruiters come to you." />
                 <link rel="canonical" href="https://stevemorales.dev/linkedin-guide" />
             </Helmet>
-            <Navbar />
-
             <HeroSection />
 
             {/* Stats strip */}
@@ -421,7 +418,6 @@ function ScorecardCard({ visible }) {
             <div className="flex items-center gap-2 px-6 py-3 border-b border-green-500/15">
                 <FaUnlock className="text-green-400 text-xs" />
                 <span className="text-green-400 font-bold text-xs tracking-widest uppercase">Free Download</span>
-                <span className="ml-auto text-green-300 font-extrabold text-sm">$0</span>
             </div>
 
             <div className="p-7 flex flex-col flex-1">
