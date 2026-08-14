@@ -1,34 +1,19 @@
-# Steve Morales - Web Developer
-Hey there! I'm Steve Morales, a computer engineering student at the University of California, San Diego, with a deep-rooted passion for creating scalable and responsive web applications. I thrive on utilizing a diverse range of programming languages and technologies to craft efficient solutions and tackle complex challenges.
+# Steve Morales | Software Engineer
 
-## About Me
-- 🎓 Computer Engineering at UC San Diego
-- 💻 Proficient in C++, Python, JavaScript, CSS, and HTML
-- 🌐 Skilled in creating RESTful APIs and full-stack development
-- ☁️ Experienced in cloud deployment on Amazon Web Services (AWS)
-- 🐳 Familiar with Docker for containerization
-- 🔗 Well-versed in version control using Git/Github and development with VS Code
+I am a Software Engineer specializing in scalable backend systems, robust test infrastructure, and platform tools. I am actively seeking roles in commercial tech where I can leverage my C++ and Python expertise to build high-performance solutions.
 
-## Projects
-### Portfolio Website Optimization
-Developed a sleek portfolio website with optimized production builds for enhanced performance and user experience.
+### 🛠 Tech Stack
+* **Core Languages:** C++, Python, Java
+* **Backend & Systems:** Linux, Docker, PostgreSQL, FastAPI
+* **CI/CD & Tools:** Jenkins, GitLab, Android Studio
 
-### San Diego Zoo Android App Replica
-Built an Android app replicating the San Diego Zoo app, incorporating various features and functionalities.
+### 🚀 Proof of Work
+* **[Proctor](#)**: Backend testing pipeline to streamline execution and validation. *Tech: Python, FastAPI, PostgreSQL.* → [Live Demo / Docs](#) | [Source Code](#)
+* **[Zoo Keeper](#)**: Route-guidance Android application built in an Agile environment. *Tech: Java, Android Studio, Google Maps API.* → [Live Demo](#) | [Source Code](#)
 
-### Autonomous Driving with DonkeyCar AI Framework
-Led a team in integrating DonkeyCar AI framework, enabling autonomous driving using ROS 2 and lane navigation.
+### 📬 Let's Connect
+Are you hiring for backend, simulation, or test infrastructure roles? Let's chat. I am currently based in San Diego and open to relocation (including the Santa Clara area).
 
-### Android App Development & CI/CD
-Directed design reviews and implemented continuous integration via GitHub Actions, preventing 55% of failed updates.
-
-## Skills & Expertise
-- **Languages**: C++, Python, JavaScript, CSS, HTML
-- **Technologies**: AWS, Docker, RESTful APIs
-- **Tools**: Git/Github, VS Code, Android Studio
-
-## Collaboration & Leadership
-I possess strong collaboration and leadership skills, evident in leading teams through complex projects and directing design reviews. My experience in implementing continuous integration methods ensures reliable quality and stability in project releases.
-
-## Let's Connect!
-I'm enthusiastic about taking on new challenges and contributing to innovative web development projects. Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/steve--morales/) or via email at steve.morales22001@gmail.com. I'm always open to discussing potential web development opportunities or connecting with like-minded individuals in the field!
+* **[LinkedIn](https://www.linkedin.com/in/steve-morales-swe/)**
+* **[Email](mailto:Steve.morales22001@gmail.com)**
+* **[Portfolio / Personal Website](https://www.steve-morales.com/)**
