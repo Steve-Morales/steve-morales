@@ -6,7 +6,7 @@ I build and test software that has to work the first time. I spent nearly 3 year
 **Reach me:** [LinkedIn](https://www.linkedin.com/in/steve-morales-swe/) · [steve.morales22001@gmail.com](mailto:steve.morales22001@gmail.com)
 
 **Featured work**
-- **[Proctor](https://github.com/Steve-Morales/proctor)**: runs AI agents against seeded test websites, scores each task pass/fail, and records every action. Python · FastAPI · PostgreSQL · React · Docker · GitHub Actions
+- **Proctor** (in progress): a harness for benchmarking AI agents on seeded test websites. Built so far: a FastAPI and PostgreSQL backend with a 6-table run and scoring schema, 4 Docker services, and CI running ruff, strict mypy, pytest, and migration checks. Python · FastAPI · PostgreSQL · Docker · GitHub Actions
 - **[Otto](https://github.com/Steve-Morales/Otto)**: Windows UI automation that records and replays mouse, keyboard, and screenshot steps. Python · PyAutoGUI
 - **[ZooSeeker](https://github.com/CSE-110-Spring-2022/zooseeker-cse-110-team-7)**: tech lead on an agile team building an Android route planner with Dijkstra's shortest path and GitHub Actions CI. Java · Android
 
