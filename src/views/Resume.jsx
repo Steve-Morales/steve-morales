@@ -6,20 +6,20 @@ import Footer from '../components/Footer';
 
 const experienceData = [
     {
-        title: "Front-End Developer",
+        title: "Software Developer",
         company: "Tactical Engineering and Analysis",
         location: "San Diego, CA",
-        period: "Mar 2025 – Present",
+        period: "Mar 2025 – May 2026",
         highlights: [
             "Reduced read I/O operations by over 90% by implementing a FileObserver with inotify, verified via iostat",
-            "Developed 100+ GoogleTest unit tests covering over 4 core modules",
+            "Developed 100+ Google Test cases across 5 C++ interfaces in a Jenkins CI/CD pipeline",
             "Authored 2 widely adopted internal technical guides, reducing onboarding and testing setup time for a 6-engineer team",
             "Performed memory profiling with Valgrind and gdb to diagnose segmentation faults and memory leaks",
             "Configured UDP multicasting over N3N VPN across distributed AWS environments"
         ]
     },
     {
-        title: "QA Software Engineer",
+        title: "Junior Software Engineer",
         company: "Programs Management Analytics & Technologies",
         location: "San Diego, CA",
         period: "Jul 2023 – Mar 2025",
@@ -54,7 +54,7 @@ const educationData = [
 const projectsData = [
     {
         title: "M.A.R.V.I.N – Medical AR for Surgeons (HoloLens)",
-        period: "Apr 2023 – Jun 2023",
+        period: "Feb 2023 – May 2023",
         highlights: [
             "Led development of a medical AR platform using Microsoft HoloLens 2",
             "Integrated Unity with Mixed Reality Toolkit (MRTK) for interactive AR interface",
@@ -97,7 +97,7 @@ export default function Resume() {
         <div className="min-h-screen bg-gray-950">
             <Helmet>
                 <title>Resume | Steve A. Morales - Software Engineer</title>
-                <meta name="description" content="Resume of Steve A. Morales, Software Engineer at Tactical Engineering and Analysis. Experienced in C++, Python, JavaScript, Docker, Linux, and test automation. CompTIA Security+ certified." />
+                <meta name="description" content="Resume of Steve A. Morales, Software engineer focused on test automation. Experienced in C++, Python, JavaScript, Docker, Linux, and test automation. CompTIA Security+ certified." />
                 <link rel="canonical" href="https://stevemorales.dev/resume" />
             </Helmet>
             <Navbar />

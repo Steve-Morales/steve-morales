@@ -44,7 +44,7 @@ export default function Home() {
         <div className="bg-gray-950 min-h-screen">
             <Helmet>
                 <title>Steve A. Morales | Software Engineer</title>
-                <meta name="description" content="Steve Morales is a Software Engineer specializing in C++, Python, and JavaScript. Front-End Developer at Tactical Engineering and Analysis. CompTIA Security+ certified." />
+                <meta name="description" content="Steve Morales is a Software Engineer specializing in C++, Python, and JavaScript. Test automation and backend engineer. M.S. Software Engineering at Arizona State University. CompTIA Security+ certified." />
                 <link rel="canonical" href="https://stevemorales.dev/" />
             </Helmet>
             <Navbar />
@@ -58,13 +58,12 @@ export default function Home() {
                     <div className='lg:w-7/12 space-y-6'>
                         <div>
                             <h1 className="text-5xl lg:text-6xl font-extrabold text-white mb-2">Steve Morales</h1>
-                            <h2 className="text-2xl lg:text-3xl font-bold text-blue-400 mb-6">Software Engineer</h2>
+                            <h2 className="text-2xl lg:text-3xl font-bold text-blue-400 mb-6">Software Engineer · Test Automation</h2>
                         </div>
 
                         <p className='text-xl text-gray-300 leading-relaxed'>
-                            Front-End Developer at Tactical Engineering and Analysis with expertise in C++, Python, and JavaScript.
-                            Specialized in performance optimization, test automation, and building robust software solutions.
-                            CompTIA Security+ certified with a strong focus on quality engineering and system reliability.
+                            I build and test software that has to work the first time. Nearly 3 years building and testing real-time systems in C++, Python, and Linux,
+                            now finishing an M.S. in Software Engineering at Arizona State University and building Proctor, a platform that tests AI agents.
                         </p>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
@@ -78,7 +77,7 @@ export default function Home() {
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300'>
                                 <h3 className='text-blue-400 font-bold text-lg mb-2'>Systems Programming</h3>
-                                <p className='text-gray-300'>Expert in C++, Linux, Docker, and distributed system architecture</p>
+                                <p className='text-gray-300'>C++, Python, Linux, and Docker across distributed AWS environments</p>
                             </div>
                             <div className='bg-gray-800/50 p-4 rounded-lg border-2 border-red-500 hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-red-500/50'>
                                 <div className='flex items-center gap-3 mb-2'>
